@@ -1,0 +1,42 @@
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2016/08/05/12/44/space-1572212_1280.png");
+    width: 960px;
+}
+
+#welcome {
+    font-size: 50px;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    float: center;
+    margin-left: 225px;
+    width: 75%;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(248, 4, 4);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin-left: 500px;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+
+.Planet {
+    float: left;
+}
