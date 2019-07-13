@@ -14,7 +14,7 @@ body {
     margin-left: 225px;
     width: 75%;
 }
-
+    /*press any key to get started*/
 p {
     font-size: 20px;
     color: rgb(248, 4, 4);
@@ -23,6 +23,7 @@ p {
     margin-left: 500px;
 }
 
+/* scoreboard styling */
 h1 {
     color: white;
 }
@@ -39,7 +40,11 @@ h4 {
     color: white;
 }
 
-.Planet {
+#Planet {
     float: left;
 }
 
+/* adding CSS to random planet image to help positioning */
+#randplanet {
+    float: right;
+    }
