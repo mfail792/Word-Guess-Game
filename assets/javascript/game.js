@@ -11,6 +11,9 @@ document.getElementById("body").addEventListener("onclick", getRandomImage(imgAr
 function getRandomImage (imgAr, path) {
     path = path || './assets/images/'; //default path
     var num = Math.floor( Math.random() * imgAr.length)
+    var img = imgAr [ num ];
+    var imgStr = '.assets/images/"' + path + img + '" alt = "">';
+    document.write(imgStr); document.close();
 }
 
 
