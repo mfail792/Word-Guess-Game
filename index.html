@@ -5,53 +5,51 @@
 
 <head>
 
-	<!-- Setting the character encoding-->
-	<meta charset="utf-8">
-	<!-- Setting viewport for screen response-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Linking to interal CSS stylesheet-->
-	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-	<!-- Linking to Meyerweb reset CSS file-->
-	<link rel="stylesheet" type="text/css" href=".assets/css/reset.css">
-	<!-- Link to Javascript file-->
-	<script src="./assets/javascript/game.js"></script>
+    <!-- Setting the character encoding-->
+    <meta charset="utf-8">
+    <!-- Setting viewport for screen response-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- Linking to Meyerweb reset CSS file-->
+    <link rel="stylesheet" type="text/css" href=".assets/css/reset.css">
+    <!-- Link to Javascript file-->
+    <script src="./assets/javascript/game.js"></script>
 
 
-	<title>Word Guess Game!</title>
+    <title>Word Guess Game!</title>
 
 </head>
 
-<body>
+<!-- wrapping div around body to initiate random key button function-->
+<div>
 
-	<!--Welcome Sign-->
-	<div id="welcome">
-		<header id="welcome">Welcome to PLANETARY WORD Guess!</header>
-	</div>
-	<div class="container">
-		<p>Press any key to get started...</p>
-	</div>
-	<br>
+    <body id="body">
 
-	<div id = "whatever">
-	</div>
+        <!--Welcome Sign-->
+        <div id="welcome">
+            <header id="welcome">Welcome to PLANETARY WORD Guess!</header>
+        </div>
 
-	<script>
-	var targetDiv = document.getElementById("whatever"); 
+        <div id="getstarted">
+            <p id="getstarted">Press any key to get started...</p>
+        </div>
+        <br>
 
-		targetDiv.textContent = ("Hello Friends!");
-		
 
-	
-	</script>
+        <script>
 
-	<div id ="planet">
-		<h1 id= "planet">Planet: _ _ _ _ _ _ _ _</h1>
-	</div>
 
-	<h2>Letters Guessed:</h2>
-	<h3>Remaining:</h3>
-	<h4>Wins:</h4>
 
+        </script>
+
+        <div id="planet">
+            <h1 id="planet">Planet: _ _ _ _ _ _ _ _</h1>
+        </div>
+
+        <h2>Letters Guessed:</h2>
+        <h3>Remaining:</h3>
+        <h4>Wins:</h4>
 
 
 
@@ -59,5 +57,8 @@
 
 
 
-</body>
+
+    </body>
+</div>
+
 </html>

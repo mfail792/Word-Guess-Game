@@ -1,8 +1,10 @@
+/*adding space background*/
 body {
     background-image: url("https://cdn.pixabay.com/photo/2016/08/05/12/44/space-1572212_1280.png");
     width: 960px;
 }
 
+/*welcome to the space game sign*/
 #welcome {
     font-size: 50px;
     color: white;
@@ -40,3 +42,4 @@ h4 {
 .Planet {
     float: left;
 }
+
