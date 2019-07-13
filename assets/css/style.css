@@ -47,4 +47,5 @@ h4 {
 /* adding CSS to random planet image to help positioning */
 #randplanet {
     float: right;
+    margin-right: 240px;
     }

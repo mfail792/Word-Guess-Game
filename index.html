@@ -12,7 +12,7 @@
     <!-- Link to CSS stylesheet-->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <!-- Linking to Meyerweb reset CSS file-->
-    <link rel="stylesheet" type="text/css" href=".assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <!-- Link to Javascript file-->
     <script src="./assets/javascript/game.js"></script>
 
@@ -37,15 +37,20 @@
         <br>
 
         <!-- Adding random planet script to output image location onto layout-->
-        <div id = "randplanet">
-        <script id ="randplanet" type="text/javascript">getRandomImage(random_images_array);</script>
+        <div id="randplanet">
+            <script id="randplanet" type="text/javascript">getRandomImage(random_images_array);</script>
         </div>
 
+
+        <!-- Added hidden input type to hide letters-->
         <div id="planet">
+            <input id="planet" type="hidden">
             <h1 id="planet">Planet: _ _ _ _ _ _ _ _</h1>
         </div>
 
+        <div id = "guessed">
         <h2>Letters Guessed:</h2>
+        </div>
         <h3>Remaining:</h3>
         <h4>Wins:</h4>
 
