@@ -138,7 +138,7 @@ function Playsound() {
 
 //function for losing sound
 function Jerk() {
-    var audio = new Audio('./assets/images/home.mp3');
+    var audio = new Audio('./assets/images/OHNO.mp3');
     audio.loop = false;
     audio.play();
 }
