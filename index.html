@@ -1,67 +1,73 @@
-<!doctype html>
-<html lang="en-us">
-
-<!-- Word Guess Game (Challenge); Homework week 3 UMN Bootcamp -->
+<!DOCTYPE html>
+<html>
+<!--Word Guess Game UMN Bootcamp.  Homework 3-->
 
 <head>
-
-    <!-- Setting the character encoding-->
-    <meta charset="utf-8">
-    <!-- Setting viewport for screen response-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to CSS stylesheet-->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <!-- Linking to Meyerweb reset CSS file-->
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-    <!-- Link to Javascript file-->
-    <script src="./assets/javascript/game.js"></script>
-
-
-    <title>Word Guess Game!</title>
+    <meta charset="utf-8" />
+    <title>PLANETARY GUESS GAME</title>
+    <!-- Setting viewport for screen support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Linking CSS files -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
-<!-- wrapping div around body to initiate random key button function-->
-<div>
+<body>
+    <!--Main Heading-->
+    <div class="heading">
+        <h1>PLANETARY GUESS GAME!</h1>
+    </div>
 
-    <body id="body">
+    <div class="background">
+        <div class="container">
 
-        <!--Welcome Sign-->
-        <div id="welcome">
-            <header id="welcome">Welcome to PLANETARY WORD Guess!</header>
-        </div>
+            <div>
+                <img id="image" src="./assets/images/Verse.jpg" width="30%" height="205">
+                <br>
+                <h2>Press Any Key To Guess The Planet!</h2>
+            </div>
+            <!--Showing planet selected-->
+            <div>
+                <h3 id="currentword">_ _ _ _ _</h3>
+            </div>
+            <div id="scoreboard">
+                <!--Guesses left Container-->
+                <div class="sidebar">
+                    <h3>GUESSES LEFT:
+                        <span id="guessesremaining"></span>
+                    </h3>
+                </div>
 
-        <div id="getstarted">
-            <p id="getstarted">Press any key to get started...</p>
-        </div>
-        <br>
+                <!--counting the wins-->
+                <div class="sidebar">
+                    <h3>WINS:
+                        <span id="wins"></span>
+                    </h3>
+                </div>
+                <!--for counting losses-->
+                <div class="sidebar">
+                    <h3>LOSSES:
+                        <span id="losses"></span>
+                    </h3>
+                </div>
 
-        <!-- Adding random planet script to output image location onto layout-->
-        <div id="randplanet">
-            <script id="randplanet" type="text/javascript">getRandomImage(random_images_array);</script>
-        </div>
-
-
-        <!-- Added hidden input type to hide letters-->
-        <div id="planet">
-            <input id="planet" type="hidden">
-            <h1 id="planet">Planet: _ _ _ _ _ _ _ _</h1>
-        </div>
-
-        <div id = "guessed">
-        <h2>Letters Guessed:</h2>
-        </div>
-        <h3>Remaining:</h3>
-        <h4>Wins:</h4>
+                <div class="sidebar">
+                    <h3>LETTER GRAVEYARD:
+                        <span id="playerguesses"></span>
+                    </h3>
+                </div>
+            </div>
+        
 
 
 
 
 
+        <script src="./assets/javascript/game.js"></script>
 
-
-
-    </body>
+</body>
+</div>
 </div>
 
 </html>

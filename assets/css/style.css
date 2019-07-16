@@ -3,49 +3,64 @@ body {
     background-image: url("https://cdn.pixabay.com/photo/2016/08/05/12/44/space-1572212_1280.png");
     width: 960px;
 }
-
-/*welcome to the space game sign*/
-#welcome {
-    font-size: 50px;
-    color: white;
-    font-family: cursive;
-    text-align: center;
-    float: center;
-    margin-left: 225px;
-    width: 75%;
-}
     /*press any key to get started*/
 p {
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(248, 4, 4);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-    margin-left: 500px;
+
+   
 }
 
-/* scoreboard styling */
+/*letter styling*/
 h1 {
     color: white;
+    float: right;
+    margin-right: -70px;
+    font-family: cursive;
+    font-size: 50px;
+    padding-bottom: 15px;
 }
 
 h2 {
-    color: white;
+    color: red;
+    font-size: 20px;
+    float: right;
+    margin-right: 125px;
+    font-style: italic;
+
 }
 
 h3 {
     color: white;
+    font-size: 30px;
 }
 
 h4 {
     color: white;
 }
 
-#Planet {
+#planet {
     float: left;
+    color: white;
 }
 
-/* adding CSS to random planet image to help positioning */
-#randplanet {
-    float: right;
-    margin-right: 240px;
-    }
+
+#getstarted {
+    margin-left: 250px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+h5 {
+    float: left;
+    color: white;
+
+}
+#image {
+
+    float: center;
+    margin-left: 540px;
+}
+

@@ -1,60 +1,171 @@
-//defining variables
-var randomPlanet = ["Neptune", "Venus", "Uranus", "Mars", "Jupiter", "Earth", "Saturn", "Mercury"];
-var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var random_images_array = [".assets/images/Earth.jpg", ".assets/images/Jupiter.jpg", ".assets/images/Mars.jpg", ".assets/images/Neptune.jpg", "./assets/images/Saturn.jpg", ".assets/images/Venus.jpg"]
-var lettersGuessed = []
-var remainGuess = 8;
+//declaring variables
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus"]
+
+//variables for storing values
+var randomWord = "";
+var lettersOfWord = [];
+var empty = 0;
+var lettersGuessed = [];
+var wrongGuess = [];
+
+//counting variables
+var wins = 0;
+var losses = 0;
+var guessesRemaining = 10;
 
 
 
-// event to start the game upon key press by calling on the body element
-document.getElementById("body").addEventListener("onclick", getRandomImage(imgAr, path)
-)
+//starts the game by pulling random image from array
+function Start() {
+    randomWord = planets[Math.floor(Math.random() * planets.length)];
 
-// function to call the random image to appear from onclick event
-function getRandomImage(imgAr, path) {
-    path = path || './assets/images/'; //default path
-    var num = Math.floor(Math.random() * imgAr.length)
-    var img = imgAr[num];
-    var imgStr = '.assets/images/"' + path + img + '" alt = "">';
-    document.write(imgStr); document.close();
+    // splits the word up to store values in seperate array 
+    lettersOfWord = randomWord.split("");
+
+    //store length of word in empty bin, to use further down
+    empty = lettersOfWord.length;
+
+    //a loop to create "_" in guess field for letters
+    for (var i = 0; i < empty; i++) {
+        lettersGuessed.push("_");
+    }
+
+    //showing the "_" within the document
+    document.getElementById("currentword").innerHTML = " " + lettersGuessed.join(" ");
+
+    
+}
+
+//key press function to start
+Start()
+
+//check for key pressed and store in 
+document.onkeyup = function (event) {
+    var guesses = String.fromCharCode(event.keyCode).toLowerCase();
+    //check to see if guess entered matches value of random word
+    checkLetters(guesses);
+    //process wins/loss 
+    complete();
+    //storing guesses 
+    console.log(guesses);
+    //storing wrong letters on screen
+    document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
 }
 
 
-// output to h1 spaces according to random image chosen from function getRandomImage 
-if (getRandomImage(imgAr, path)[0] = true)
-    document.getElementById("planet").innerHTML(" N E P T U N E");
-else {
-    if (getRandomImage(imgAr, path)[1] = true)
-        document.getElementById("planet").innerHTML(" V E N U S");
+//function to call corresponding image from planets array and alerting user of name
+
+function img() {
+
+    if (randomWord === planets[0]) {
+        document.getElementById("image").src = "./assets/images/Jupiter.jpg";
+        alert("Jupiter!");
+    }
+
+    else if (randomWord === planets[1]) {
+        document.getElementById("image").src = "./assets/images/Neptune.jpg";
+        alert("Neptune!");
+    }
+
+    else if (randomWord === planets[2]) {
+        document.getElementById("image").src = "./assets/images/Earth.jpg";
+        alert("Earth!");
+    }
+
+    else if (randomWord === planets[3]) {
+        document.getElementById("image").src = "./assets/images/Mars.jpg";
+        alert("Mars!");
+    }
+
+    else if (randomWord === planets[4]) {
+        document.getElementById("image").src = "./assets/images/Saturn.jpg";
+        alert("Saturn!");
+    }
+
+    else if (randomWord === planets[5]) {
+        document.getElementById("image").src = "./assets/images/Mercury.jpg";
+        alert("Mercury!");
+    }
+
+    else if (randomWord === planets[6]) {
+        document.getElementById("image").src = "./assets/images/Venus.jpg";
+        alert("Venus!");
+    }
+};
+
+// resets the game
+function reset() {
+    guessesRemaining = 10;
+    wrongGuess = [];
+    lettersGuessed = [];
+    Start()
+}
+
+
+
+//using if else statement to see if letter selected matches random word
+function checkLetters(letter) {
+    var letterInWord = false;
+    //setting variable to true if letter matches within the generated word
+    for (var i = 0; i < empty; i++) {
+        if (randomWord[i] == letter) {
+            letterInWord = true;
+        }
+    }
+    //if letterInWord (false)
+    if (letterInWord) {
+        //check each letter to see if it matches the chosen word
+        for (var i = 0; i < empty; i++) {
+            if (randomWord[i] == letter) {
+                lettersGuessed[i] = letter;
+            }
+        }
+    }
+    //reducing guesses if letter is wrong
     else {
-        if (getRandomImage(imgAr, path)[2] = true)
-            document.getElementById("planet").innerHTML(" U R A N U S");
-        else {
-            if (getRandomImage(imgAr, path)[3] = true)
-                document.getElementById("planet").innerHTML(" M A R S");
-            else {
-                if (getRandomImage(imgAr, path)[4] = true)
-                    document.getElementById("planet").innerHTML(" J U P I T E R");
-                else {
-                    if (getRandomImage(imgAr, path)[5] = true)
-                        document.getElementById("planet").innerHTML(" E A R T H");
-                    else {
-                        if (getRandomImage(imgAr, path)[6] = true)
-                            document.getElementById("planet").innerHTML(" S A T U R N");
-                        else {
-                            if (getRandomImage(imgAr, path)[7]= true)
-                                document.getElementById("planet").innerHTML(" M E R C U R Y");
-                        }
+        wrongGuess.push(letter);
+        guessesRemaining--;
+    }
+    console.log(lettersGuessed);
+}
 
+//function for winning sound
+function Playsound() {
+    var audio = new Audio('./assets/images/TADA.wav');
+    audio.loop = false;
+    audio.play();
+}
 
+//function for losing sound
+function Jerk() {
+    var audio = new Audio('./assets/images/home.mp3');
+    audio.loop = false;
+    audio.play();
+}
 
+//verifying the win
+function complete() {
+    console.log("wins:" + wins + "| losses:" + losses + "| guesses left:" + guessesRemaining)
 
+    //if player wins, grab corresponding image from img function and play a noise
+    if (lettersOfWord.toString() == lettersGuessed.toString()) {
+        wins++;
+        img()
+        reset()
+        Playsound()
+        //display wins on screen
+        document.getElementById("wins").innerHTML = " " + wins;
 
-//creating a function to capture user's letter guess after game start and input incorrect guesses into h2 field
-
-
-
-
-
+        //if player loses then show losing image and play sound clip
+    } else if (guessesRemaining === 0) {
+        losses++;
+        reset()
+        Jerk()
+        document.getElementById("image").src = "./assets/images/LOST.jpg"
+        document.getElementById("losses").innerHTML = " " + losses;
+    }
+    //display losses and guesses left
+    document.getElementById("currentword").innerHTML = "  " + lettersGuessed.join(" ");
+    document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
+}
 
