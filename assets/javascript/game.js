@@ -19,7 +19,7 @@ var guessesRemaining = 10;
 function Start() {
     randomWord = planets[Math.floor(Math.random() * planets.length)];
 
-    // splits the word up to store values in seperate array 
+    // splits the word up to store values in seperate randomWord array 
     lettersOfWord = randomWord.split("");
 
     //store length of word in empty bin, to use further down
@@ -121,7 +121,7 @@ function checkLetters(letter) {
             }
         }
     }
-    //reducing guesses if letter is wrong
+    //reducing guesses by one (1) if letter is wrong
     else {
         wrongGuess.push(letter);
         guessesRemaining--;
@@ -143,7 +143,7 @@ function Jerk() {
     audio.play();
 }
 
-//verifying the win
+//tallying the win
 function complete() {
     console.log("wins:" + wins + "| losses:" + losses + "| guesses left:" + guessesRemaining)
 
