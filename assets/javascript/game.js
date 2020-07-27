@@ -53,7 +53,7 @@ function display_random_planet() {
         height: "160"
     }];
 
-        
+//this keeps adding planets to the image src over and over using a for loop        
 var preBuffer = [];
 for (var i = 0, j = thePlanets.length; i < j; i++) {
     preBuffer[i] = new Image();
@@ -243,3 +243,4 @@ function complete() {
     document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
 }
 
+}
