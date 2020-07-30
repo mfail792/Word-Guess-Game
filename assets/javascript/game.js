@@ -171,7 +171,7 @@ function complete() {
         losses++;
         reset()
         Jerk()
-        document.getElementById("image").src = "./assets/images/LOST.jpg"
+        document.getElementById("image").src = "./assets/images/dawson.jpg"
         document.getElementById("losses").innerHTML = " " + losses;
     }
     //display losses and guesses left
