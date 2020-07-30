@@ -16,7 +16,6 @@ var losses = 0;
 var guessesRemaining = 10;
 
 
-
 document.getElementById("image").addEventListener("click", img);
 
 Start();
@@ -71,37 +70,37 @@ function img() {
 
     if (randomWord === planets[0]) {
         document.getElementById("image").src = "./assets/images/Jupiter.jpg";
-        alert("Jupiter!");
+        alert("Fifth planet from the sun!");
     }
 
     else if (randomWord === planets[1]) {
         document.getElementById("image").src = "./assets/images/Neptune.jpg";
-        alert("Neptune!");
+        alert("Roman god of the sea!");
     }
 
     else if (randomWord === planets[2]) {
         document.getElementById("image").src = "./assets/images/Earth.jpg";
-        alert("Earth!");
+        alert("Mother!");
     }
 
     else if (randomWord === planets[3]) {
         document.getElementById("image").src = "./assets/images/Mars.jpg";
-        alert("Mars!");
+        alert("Massive dust storms!");
     }
 
     else if (randomWord === planets[4]) {
         document.getElementById("image").src = "./assets/images/Saturn.jpg";
-        alert("Saturn!");
+        alert("Has 62 moons!");
     }
 
     else if (randomWord === planets[5]) {
         document.getElementById("image").src = "./assets/images/Mercury.jpg";
-        alert("Mercury!");
+        alert("Closest planet to the sun!");
     }
 
     else if (randomWord === planets[6]) {
         document.getElementById("image").src = "./assets/images/Venus.jpg";
-        alert("Venus!");
+        alert("One day is longer than a year!");
     }
 };
 
@@ -162,7 +161,6 @@ function complete() {
     //if player wins, grab corresponding image from img function and play a noise
     if (lettersOfWord.toString() == lettersGuessed.toString()) {
         wins++;
-        img()
         reset()
         Playsound()
         //display wins on screen
