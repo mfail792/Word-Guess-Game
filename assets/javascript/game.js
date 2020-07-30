@@ -1,5 +1,6 @@
 //declaring variables
 var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus"]
+var images = []
 
 //variables for storing values
 var randomWord = "";
@@ -15,13 +16,14 @@ var losses = 0;
 var guessesRemaining = 10;
 
 
+
+document.getElementById("image").addEventListener("click", img);
+
 Start();
 
 //starts the game by pulling random image from array and storing it in randomWord
 function Start() {
 
-
-    // document.getElementById("image").addEventListener("click", randomWord);
 
     randomWord = planets[Math.floor(Math.random() * planets.length)];
 
@@ -59,6 +61,8 @@ document.onkeyup = function (event) {
     //storing wrong letters on screen
     document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
 }
+
+
 
 
 //function to call corresponding image from planets array and alerting user of name
