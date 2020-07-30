@@ -1,6 +1,6 @@
 //declaring variables
-var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus"]
-var images = []
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus"]
+var images = [];
 
 //variables for storing values
 var randomWord = "";
@@ -49,6 +49,8 @@ function Start() {
 function clearIt() {
     document.getElementById("daws").innerHTML = "";
 }
+
+
 
 
 
@@ -110,7 +112,14 @@ function img() {
 
     else if (randomWord === planets[6]) {
         document.getElementById("image").src = "./assets/images/Venus.jpg";
-        alert("One day is longer than a year!");
+        alert("One day here is longer than a year!");
+        clearIt()
+        
+    }
+
+    else if (randomWord === planets[7]) {
+        document.getElementById("image").src = "./assets/images/uranus.jpg";
+        alert("Known an ICE GIANT!");
         clearIt()
     }
 };
