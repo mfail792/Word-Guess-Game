@@ -15,80 +15,14 @@ var losses = 0;
 var guessesRemaining = 10;
 
 
-
-//start of random planet display upon image click
-
-document.getElementById("image").addEventListener("click", display_random_planet);
-
-
-function display_random_planet() {
-    var thePlanets= [{
-        src: "./assets/images/Jupiter.jpg",
-        width: "240",
-        height: "160"
-
-    },{
-        src: "./assets/images/Neptune.jpg",
-        width: "240",
-        height: "160"
-    }, {
-        src: "./assets/images/Earth.jpg",
-        width: "240",
-        height: "160"
-    },{
-        src: "./assets/images/Mars.jpg",
-        width: "240",
-        height: "160"
-    }, {
-        src: "./assets/images/Saturn.jpg",
-        width: "240",
-        height: "160"
-    },{
-        src: "./assets/images/Mercury.jpg",
-        width: "240",
-        height: "160"
-    },{
-        src: ".assets/images/Venus.jpg",
-        width: "240",
-        height: "160"
-    }];
-
-//this keeps adding planets to the image src over and over using a for loop        
-var preBuffer = [];
-for (var i = 0, j = thePlanets.length; i < j; i++) {
-    preBuffer[i] = new Image();
-    preBuffer[i].src = thePlanets[i].src;
-    preBuffer[i].width = thePlanets[i].width;
-    preBuffer[i].height = thePlanets[i].height;
-}
-
-//creating random image number
-function getRandomInt(min,max)
-{
-    imn = Math.floor(Math.random() * (max - min + 1)) + min;
-    return preBuffer[imn];
-}
-
-
-var newPlanet = getRandomInt(0, preBuffer.length - 1);
-
-//removing old images
-var images = document.getElementsByTagName('image');
-var l = images.length;
-for (var p = 0; p < l, p++) {
-    images[0].parentNode.removeChild(images[0]);
-}
-
-//display the image
-document.body.appendChild(newPlanet);
-
-//end random image display
-
-
-Start()
+Start();
 
 //starts the game by pulling random image from array and storing it in randomWord
 function Start() {
+
+
+    // document.getElementById("image").addEventListener("click", randomWord);
+
     randomWord = planets[Math.floor(Math.random() * planets.length)];
 
     //document.getElementById("image").append = randomWord;
@@ -243,4 +177,10 @@ function complete() {
     document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
 }
 
-}
+
+
+
+
+
+
+
