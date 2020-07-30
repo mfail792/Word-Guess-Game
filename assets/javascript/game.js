@@ -13,7 +13,7 @@ var wrongGuess = [];
 //counting variables
 var wins = 0;
 var losses = 0;
-var guessesRemaining = 10;
+var guessesRemaining = 5;
 
 
 document.getElementById("image").addEventListener("click", img);
@@ -46,6 +46,10 @@ function Start() {
 
 }
 
+function clearIt() {
+    document.getElementById("daws").innerHTML = "";
+}
+
 
 
 //check for key pressed and store in 
@@ -71,42 +75,49 @@ function img() {
     if (randomWord === planets[0]) {
         document.getElementById("image").src = "./assets/images/Jupiter.jpg";
         alert("Fifth planet from the sun!");
+        clearIt()
     }
 
     else if (randomWord === planets[1]) {
         document.getElementById("image").src = "./assets/images/Neptune.jpg";
         alert("Roman god of the sea!");
+        clearIt()
     }
 
     else if (randomWord === planets[2]) {
         document.getElementById("image").src = "./assets/images/Earth.jpg";
         alert("Mother!");
+        clearIt()
     }
 
     else if (randomWord === planets[3]) {
         document.getElementById("image").src = "./assets/images/Mars.jpg";
         alert("Massive dust storms!");
+        clearIt()
     }
 
     else if (randomWord === planets[4]) {
         document.getElementById("image").src = "./assets/images/Saturn.jpg";
         alert("Has 62 moons!");
+        clearIt()
     }
 
     else if (randomWord === planets[5]) {
         document.getElementById("image").src = "./assets/images/Mercury.jpg";
         alert("Closest planet to the sun!");
+        clearIt()
     }
 
     else if (randomWord === planets[6]) {
         document.getElementById("image").src = "./assets/images/Venus.jpg";
         alert("One day is longer than a year!");
+        clearIt()
     }
 };
 
 // resets the game
 function reset() {
-    guessesRemaining = 10;
+    guessesRemaining = 5;
     wrongGuess = [];
     lettersGuessed = [];
     Start()
@@ -165,6 +176,7 @@ function complete() {
         Playsound()
         //display wins on screen
         document.getElementById("wins").innerHTML = " " + wins;
+        document.getElementById("daws").innerHTML = "Keep going!";
 
         //if player loses then show losing image and play sound clip
     } else if (guessesRemaining === 0) {
@@ -173,6 +185,8 @@ function complete() {
         Jerk()
         document.getElementById("image").src = "./assets/images/dawson.jpg"
         document.getElementById("losses").innerHTML = " " + losses;
+        document.getElementById("daws").innerHTML = "Oh no! Click on sad dawson for another planet!";
+        
     }
     //display losses and guesses left
     document.getElementById("currentword").innerHTML = "  " + lettersGuessed.join(" ");
