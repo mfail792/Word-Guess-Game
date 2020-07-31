@@ -1,5 +1,5 @@
 //declaring variables
-var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus"]
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon"]
 var images = [];
 
 //variables for storing values
@@ -114,12 +114,18 @@ function img() {
         document.getElementById("image").src = "./assets/images/Venus.jpg";
         alert("One day here is longer than a year!");
         clearIt()
-        
+
     }
 
     else if (randomWord === planets[7]) {
         document.getElementById("image").src = "./assets/images/uranus.jpg";
         alert("Known an ICE GIANT!");
+        clearIt()
+    }
+
+    else if (randomWord === planets[8]) {
+        document.getElementById("image").src = "./assets/images/fullmoon.jpg";
+        alert("Our permanent, natural satellite...")
         clearIt()
     }
 };
@@ -195,7 +201,7 @@ function complete() {
         document.getElementById("image").src = "./assets/images/dawson.jpg"
         document.getElementById("losses").innerHTML = " " + losses;
         document.getElementById("daws").innerHTML = "Oh no! Click on sad dawson for another planet!";
-        
+
     }
     //display losses and guesses left
     document.getElementById("currentword").innerHTML = "  " + lettersGuessed.join(" ");
