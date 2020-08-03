@@ -1,5 +1,5 @@
 //declaring variables
-var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon"]
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun"]
 var images = [];
 
 //variables for storing values
@@ -126,6 +126,11 @@ function img() {
     else if (randomWord === planets[8]) {
         document.getElementById("image").src = "./assets/images/fullmoon.jpg";
         alert("Our permanent, natural satellite...")
+        clearIt()
+    }
+    else if (randomWord === planets[9]) {
+        document.getElementById("image").src = "./assets/images/sun.jpg";
+        alert("Our favorite yellow dwarf star!")
         clearIt()
     }
 };
