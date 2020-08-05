@@ -215,7 +215,7 @@ function complete() {
         //display wins on screen
         document.getElementById("wins").innerHTML = " " + wins;
         winPhrase()
-
+       
 
         //if player loses then show losing image and play sound clip
     } else if (guessesRemaining === 0) {
