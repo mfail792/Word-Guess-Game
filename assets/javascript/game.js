@@ -224,7 +224,7 @@ function complete() {
         Jerk()
         document.getElementById("image").src = "./assets/images/dawson.jpg"
         document.getElementById("losses").innerHTML = " " + losses;
-        document.getElementById("daws").innerHTML = "Oh no! Click on sad dawson for another planet!";
+        document.getElementById("daws").innerHTML = "Oh no! Click on sad dawson for another object!";
 
     }
     //display losses and guesses left
