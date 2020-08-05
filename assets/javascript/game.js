@@ -1,6 +1,9 @@
 //declaring variables
-var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun","ceres"]
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres"]
 var images = [];
+var phrases = ["Keep going!", "Doing great!", "Crushing it!", "Another win!", "You are amazing!", "More to come!"]
+
+
 
 //variables for storing values
 var randomWord = "";
@@ -17,6 +20,16 @@ var guessesRemaining = 5;
 
 
 document.getElementById("image").addEventListener("click", img);
+
+//function here for math random to grab from phrases and display on page under complete() win++
+function winPhrase() {
+
+    randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+
+    document.getElementById('daws').innerHTML = randomPhrase;
+}
+
+
 
 Start();
 
@@ -201,7 +214,8 @@ function complete() {
         Playsound()
         //display wins on screen
         document.getElementById("wins").innerHTML = " " + wins;
-        document.getElementById("daws").innerHTML = "Keep going!";
+        winPhrase()
+
 
         //if player loses then show losing image and play sound clip
     } else if (guessesRemaining === 0) {
