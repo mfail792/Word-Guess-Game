@@ -1,5 +1,5 @@
 //declaring variables
-var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun"]
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun","ceres"]
 var images = [];
 
 //variables for storing values
@@ -131,6 +131,11 @@ function img() {
     else if (randomWord === planets[9]) {
         document.getElementById("image").src = "./assets/images/sun.jpg";
         alert("Our favorite yellow dwarf star!")
+        clearIt()
+    }
+    else if (randomWord === planets[10]) {
+        document.getElementById("image").src = "./assets/images/ceres.jpg";
+        alert("Named after the Roman goddess of agriculture")
         clearIt()
     }
 };
