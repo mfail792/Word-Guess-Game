@@ -1,7 +1,7 @@
 //declaring variables
 var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres"]
 var images = [];
-var phrases = ["Keep going!", "Doing great!", "Crushing it!", "Another win!", "You are amazing!", "More to come!"]
+var phrases = ["Keep going!", "Doing great!", "Crushing it!", "A win!", "You are amazing!", "More to come!", "Feeling spacey yet?"]
 
 
 
