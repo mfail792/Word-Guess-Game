@@ -1,7 +1,7 @@
 //declaring variables
-var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres"]
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres", "gliese667cc"]
 var images = [];
-var phrases = ["Keep going!", "Doing great!", "Crushing it!", "A win!", "You are amazing!", "More to come!", "Feeling spacey yet?"]
+var phrases = ["Keep going!", "Doing great!", "Crushing it!", "You Rock!", "You are amazing!", "More to come!", "Feeling spacey yet?", "Winner!"]
 
 
 
@@ -149,6 +149,11 @@ function img() {
     else if (randomWord === planets[10]) {
         document.getElementById("image").src = "./assets/images/ceres.jpg";
         alert("Named after the Roman goddess of agriculture")
+        clearIt()
+    }
+    else if (randomWord === planets[11]) {
+        document.getElementById("image").src = "./assets/images/gliese667cc.jpg";
+        alert("An exoplanet that orbits the star Gliese 667 C!")
         clearIt()
     }
 };
