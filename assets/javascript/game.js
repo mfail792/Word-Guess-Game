@@ -1,7 +1,7 @@
 //declaring variables
-var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres", "gliese667cc"]
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres", "gliese667cc", "proximab"]
 var images = [];
-var phrases = ["Keep going!", "Doing great!", "Crushing it!", "You Rock!", "You are amazing!", "More to come!", "Feeling spacey yet?", "Winner!"]
+var phrases = ["Keep going!", "Doing great!", "Crushing it!", "You Rock!", "You are amazing!", "More to come!", "Feeling spacey yet?", "Winner!", "Aww yeah!"]
 
 
 
@@ -132,7 +132,7 @@ function img() {
 
     else if (randomWord === planets[7]) {
         document.getElementById("image").src = "./assets/images/uranus.jpg";
-        alert("Known an ICE GIANT!");
+        alert("Known as an ICE GIANT!");
         clearIt()
     }
 
@@ -154,6 +154,11 @@ function img() {
     else if (randomWord === planets[11]) {
         document.getElementById("image").src = "./assets/images/gliese667cc.jpg";
         alert("An exoplanet that orbits the star Gliese 667 C!")
+        clearIt()
+    }
+    else if (randomWord === planets[12]) {
+        document.getElementById("image").src = "./assets/images/proximab.jpg";
+        alert("This exoplanet is considered a 'super earth' that orbits a distant star!")
         clearIt()
     }
 };
@@ -229,7 +234,7 @@ function complete() {
         Jerk()
         document.getElementById("image").src = "./assets/images/dawson.jpg"
         document.getElementById("losses").innerHTML = " " + losses;
-        document.getElementById("daws").innerHTML = "Oh no! Click on sad dawson for another object!";
+        document.getElementById("daws").innerHTML = "Oh no! Click on sad dawson for another clue!";
 
     }
     //display losses and guesses left
