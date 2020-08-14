@@ -1,5 +1,5 @@
 //declaring variables
-var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres", "gliese667cc", "proximab"]
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres", "gliese667cc", "proximab", "kepler16b"]
 var images = [];
 var phrases = ["Keep going!", "Doing great!", "Crushing it!", "You Rock!", "You are amazing!", "More to come!", "Feeling spacey yet?", "Winner!", "Aww yeah!"]
 
@@ -159,6 +159,11 @@ function img() {
     else if (randomWord === planets[12]) {
         document.getElementById("image").src = "./assets/images/proximab.jpg";
         alert("This exoplanet is considered a 'super earth' that orbits a distant star!")
+        clearIt()
+    }
+    else if (randomWord === planets[13]) {
+        document.getElementById("image").src = "./assets/images/kepler16b.jpg";
+        alert("This extrasolar planet is composed of gas, ice and rock!")
         clearIt()
     }
 };
