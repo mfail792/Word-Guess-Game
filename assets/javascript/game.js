@@ -1,7 +1,7 @@
 //declaring variables
 var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres", "gliese667cc", "proximab", "kepler16b"]
 var images = [];
-var phrases = ["Keep going!", "Doing great!", "Crushing it!", "You Rock!", "You are amazing!", "More to come!", "Feeling spacey yet?", "Winner!", "Aww yeah!"]
+var phrases = ["Amazing! Click again!", "Doing great! Click again!", "Crushing it! Click again!", "You Rock! Click again!", "You are amazing! Click again", "More to come! Click again!", "Feeling spacey yet? Click again!", "Winner! Click again!", "Aww yeah! Click again!"]
 
 
 
@@ -138,7 +138,7 @@ function img() {
 
     else if (randomWord === planets[8]) {
         document.getElementById("image").src = "./assets/images/fullmoon.jpg";
-        alert("Our permanent, natural satellite...")
+        alert("Our permanent, natural satellite!")
         clearIt()
     }
     else if (randomWord === planets[9]) {
@@ -148,7 +148,7 @@ function img() {
     }
     else if (randomWord === planets[10]) {
         document.getElementById("image").src = "./assets/images/ceres.jpg";
-        alert("Named after the Roman goddess of agriculture")
+        alert("Named after the Roman goddess of agriculture!")
         clearIt()
     }
     else if (randomWord === planets[11]) {
