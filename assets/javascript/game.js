@@ -1,7 +1,7 @@
 //declaring variables
-var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres", "gliese667cc", "proximab", "kepler16b"]
+var planets = ["jupiter", "neptune", "earth", "mars", "saturn", "mercury", "venus", "uranus", "moon", "sun", "ceres", "gliese667cc", "proximab", "kepler16b", "kepler452b"]
 var images = [];
-var phrases = ["Amazing! Click again!", "Doing great! Click again!", "Crushing it! Click again!", "You Rock! Click again!", "You are amazing! Click again", "More to come! Click again!", "Feeling spacey yet? Click again!", "Winner! Click again!", "Aww yeah! Click again!"]
+var phrases = ["Amazing! Click again", "Doing great! Click again", "Crushing it! Click again", "You Rock! Click again", "You are amazing! Click again", "More to come! Click again", "Feeling spacey yet? Click again", "Winner! Click again", "Aww yeah! Click again"]
 
 
 
@@ -17,6 +17,11 @@ var wrongGuess = [];
 var wins = 0;
 var losses = 0;
 var guessesRemaining = 5;
+
+
+
+//insert jquery function here to call mymodal
+
 
 
 document.getElementById("image").addEventListener("click", img);
@@ -164,6 +169,11 @@ function img() {
     else if (randomWord === planets[13]) {
         document.getElementById("image").src = "./assets/images/kepler16b.jpg";
         alert("This extrasolar planet is composed of gas, ice and rock!")
+        clearIt()
+    }
+    else if (randomWord === planets[14]) {
+        document.getElementById("image").src = "./assets/images/kepler452b.jpg";
+        alert("This exoplanet is sometimes called 'Earth 2.0")
         clearIt()
     }
 };
