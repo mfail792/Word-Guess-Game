@@ -85,8 +85,17 @@ document.onkeyup = function (event) {
     document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
 }
 
+function modalZero() {
+    $('#zeroModal').modal('show');
+}
 
+function modalOne() {
+    $('#oneModal').modal('show');
+}
 
+function modalTwo() {
+    $('#twoModal').modal('show');
+}
 
 //function to call corresponding image from planets array and alerting user of name
 
@@ -94,19 +103,19 @@ function img() {
 
     if (randomWord === planets[0]) {
         document.getElementById("image").src = "./assets/images/Jupiter.jpg";
-        alert("Fifth planet from the sun!");
+        modalZero();
         clearIt()
     }
 
     else if (randomWord === planets[1]) {
         document.getElementById("image").src = "./assets/images/Neptune.jpg";
-        alert("Roman god of the sea!");
+        modalOne();
         clearIt()
     }
 
     else if (randomWord === planets[2]) {
         document.getElementById("image").src = "./assets/images/Earth.jpg";
-        alert("Mother!");
+        modalTwo();
         clearIt()
     }
 
@@ -173,7 +182,7 @@ function img() {
     }
     else if (randomWord === planets[14]) {
         document.getElementById("image").src = "./assets/images/kepler452b.jpg";
-        alert("This exoplanet is sometimes called 'Earth 2.0")
+        alert("This exoplanet is sometimes called 'Earth 2.0'")
         clearIt()
     }
 };
@@ -240,7 +249,7 @@ function complete() {
         //display wins on screen
         document.getElementById("wins").innerHTML = " " + wins;
         winPhrase()
-       
+
 
         //if player loses then show losing image and play sound clip
     } else if (guessesRemaining === 0) {
@@ -249,7 +258,7 @@ function complete() {
         Jerk()
         document.getElementById("image").src = "./assets/images/dawson.jpg"
         document.getElementById("losses").innerHTML = " " + losses;
-        document.getElementById("daws").innerHTML = "Oh no! Click on sad dawson for another clue!";
+        document.getElementById("daws").innerHTML = "Oh no! Click on sad dawson for another clue";
 
     }
     //display losses and guesses left
