@@ -85,6 +85,8 @@ document.onkeyup = function (event) {
     document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
 }
 
+//MODAL CALLS
+
 function modalZero() {
     $('#zeroModal').modal('show');
 }
@@ -97,7 +99,7 @@ function modalTwo() {
     $('#twoModal').modal('show');
 }
 
-//function to call corresponding image from planets array and alerting user of name
+//function to call corresponding image from planets array and then showing the appropriate modal clue
 
 function img() {
 
