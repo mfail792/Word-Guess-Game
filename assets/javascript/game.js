@@ -99,6 +99,10 @@ function modalTwo() {
     $('#twoModal').modal('show');
 }
 
+function modalThree() {
+    $('#threeModal').modal('show');
+}
+
 //function to call corresponding image from planets array and then showing the appropriate modal clue
 
 function img() {
@@ -123,7 +127,7 @@ function img() {
 
     else if (randomWord === planets[3]) {
         document.getElementById("image").src = "./assets/images/Mars.jpg";
-        alert("Massive dust storms!");
+        modalThree();
         clearIt()
     }
 
