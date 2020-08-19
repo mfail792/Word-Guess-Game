@@ -107,6 +107,10 @@ function modalFour() {
     $('#fourModal').modal('show');
 }
 
+function modalFive() {
+    $('#fiveModal').modal('show');
+}
+
 //function to call corresponding image from planets array and then showing the appropriate modal clue
 
 function img() {
@@ -143,7 +147,7 @@ function img() {
 
     else if (randomWord === planets[5]) {
         document.getElementById("image").src = "./assets/images/Mercury.jpg";
-        alert("Closest planet to the sun!");
+        modalFive();
         clearIt()
     }
 
