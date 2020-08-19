@@ -103,6 +103,10 @@ function modalThree() {
     $('#threeModal').modal('show');
 }
 
+function modalFour() {
+    $('#fourModal').modal('show');
+}
+
 //function to call corresponding image from planets array and then showing the appropriate modal clue
 
 function img() {
@@ -133,7 +137,7 @@ function img() {
 
     else if (randomWord === planets[4]) {
         document.getElementById("image").src = "./assets/images/Saturn.jpg";
-        alert("Has 62 moons!");
+        modalFour();
         clearIt()
     }
 
@@ -188,12 +192,12 @@ function img() {
     }
     else if (randomWord === planets[14]) {
         document.getElementById("image").src = "./assets/images/kepler452b.jpg";
-        alert("This exoplanet is sometimes called 'Earth 2.0'")
+        alert("This exoplanet is sometimes called 'Earth 2.0'!")
         clearIt()
     }
     else if (randomWord === planets[15]) {
         document.getElementById("image").src = "./assets/images/andromeda.jpg";
-        alert("Our neighboring galaxy")
+        alert("Our neighboring galaxy!")
         clearIt()
     }
 };
