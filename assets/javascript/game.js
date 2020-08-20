@@ -111,6 +111,10 @@ function modalFive() {
     $('#fiveModal').modal('show');
 }
 
+function modalSix() {
+    $('#sixModal').modal('show');
+}
+
 //function to call corresponding image from planets array and then showing the appropriate modal clue
 
 function img() {
@@ -153,7 +157,7 @@ function img() {
 
     else if (randomWord === planets[6]) {
         document.getElementById("image").src = "./assets/images/Venus.jpg";
-        alert("One day here is longer than a year!");
+        modalSix();
         clearIt()
 
     }
