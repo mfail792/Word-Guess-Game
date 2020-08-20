@@ -115,6 +115,11 @@ function modalSix() {
     $('#sixModal').modal('show');
 }
 
+function modalSeven() {
+    $('#sevenModal').modal('show');
+}
+
+
 //function to call corresponding image from planets array and then showing the appropriate modal clue
 
 function img() {
@@ -164,7 +169,7 @@ function img() {
 
     else if (randomWord === planets[7]) {
         document.getElementById("image").src = "./assets/images/uranus.jpg";
-        alert("Known as an ICE GIANT!");
+        modalSeven();
         clearIt()
     }
 
