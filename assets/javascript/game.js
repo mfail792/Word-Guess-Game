@@ -119,6 +119,10 @@ function modalSeven() {
     $('#sevenModal').modal('show');
 }
 
+function modalEight() {
+    $('eightModal').modal('show');
+}
+
 
 //function to call corresponding image from planets array and then showing the appropriate modal clue
 
@@ -175,7 +179,7 @@ function img() {
 
     else if (randomWord === planets[8]) {
         document.getElementById("image").src = "./assets/images/fullmoon.jpg";
-        alert("Our permanent, natural satellite!")
+        modalEight();
         clearIt()
     }
     else if (randomWord === planets[9]) {
