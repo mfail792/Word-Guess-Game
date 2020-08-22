@@ -138,50 +138,41 @@ function img() {
         modalZero();
         clearIt()
     }
-
     else if (randomWord === planets[1]) {
         document.getElementById("image").src = "./assets/images/Neptune.jpg";
         modalOne();
         clearIt()
     }
-
     else if (randomWord === planets[2]) {
         document.getElementById("image").src = "./assets/images/Earth.jpg";
         modalTwo();
         clearIt()
     }
-
     else if (randomWord === planets[3]) {
         document.getElementById("image").src = "./assets/images/Mars.jpg";
         modalThree();
         clearIt()
     }
-
     else if (randomWord === planets[4]) {
         document.getElementById("image").src = "./assets/images/Saturn.jpg";
         modalFour();
         clearIt()
     }
-
     else if (randomWord === planets[5]) {
         document.getElementById("image").src = "./assets/images/Mercury.jpg";
         modalFive();
         clearIt()
     }
-
     else if (randomWord === planets[6]) {
         document.getElementById("image").src = "./assets/images/Venus.jpg";
         modalSix();
         clearIt()
-
     }
-
     else if (randomWord === planets[7]) {
         document.getElementById("image").src = "./assets/images/uranus.jpg";
         modalSeven();
         clearIt()
     }
-
     else if (randomWord === planets[8]) {
         document.getElementById("image").src = "./assets/images/fullmoon.jpg";
         modalEight();
@@ -189,7 +180,7 @@ function img() {
     }
     else if (randomWord === planets[9]) {
         document.getElementById("image").src = "./assets/images/sun.jpg";
-        alert("Our favorite yellow dwarf star!")
+        modalNine();
         clearIt()
     }
     else if (randomWord === planets[10]) {
