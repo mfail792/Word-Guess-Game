@@ -120,8 +120,13 @@ function modalSeven() {
 }
 
 function modalEight() {
-    $('eightModal').modal('show');
+    $('#eightModal').modal('show');
 }
+
+function modalNine() {
+    $('#nineModal').modal('show');
+}
+
 
 
 //function to call corresponding image from planets array and then showing the appropriate modal clue
