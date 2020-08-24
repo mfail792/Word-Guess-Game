@@ -127,6 +127,11 @@ function modalNine() {
     $('#nineModal').modal('show');
 }
 
+function modalTen() {
+    $('#tenModal').modal('show');
+}
+
+
 
 
 //function to call corresponding image from planets array and then showing the appropriate modal clue
@@ -185,7 +190,7 @@ function img() {
     }
     else if (randomWord === planets[10]) {
         document.getElementById("image").src = "./assets/images/ceres.jpg";
-        alert("Named after the Roman goddess of agriculture!")
+        modalTen();
         clearIt()
     }
     else if (randomWord === planets[11]) {
