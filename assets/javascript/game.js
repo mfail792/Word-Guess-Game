@@ -135,6 +135,11 @@ function modalEleven() {
     $('#elevenModal').modal('show');
 }
 
+function modalTwelve() {
+    $('#twelveModal').modal('show');
+}
+
+
 
 
 
@@ -205,7 +210,7 @@ function img() {
     }
     else if (randomWord === planets[12]) {
         document.getElementById("image").src = "./assets/images/proximab.jpg";
-        alert("This exoplanet is considered a 'super earth' that orbits a distant star!")
+        modalTwelve();
         clearIt()
     }
     else if (randomWord === planets[13]) {
