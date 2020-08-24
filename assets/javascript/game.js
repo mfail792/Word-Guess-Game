@@ -200,7 +200,7 @@ function img() {
     }
     else if (randomWord === planets[11]) {
         document.getElementById("image").src = "./assets/images/gliese667cc.jpg";
-        alert("An exoplanet that orbits the star Gliese 667 C!")
+        modalEleven();
         clearIt()
     }
     else if (randomWord === planets[12]) {
