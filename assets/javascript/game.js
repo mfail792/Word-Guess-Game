@@ -143,6 +143,10 @@ function modalThirteen() {
     $('#thirteenModal').modal('show');
 }
 
+function modalThirteen() {
+    $('#thirteenModal').modal('show');
+}
+
 
 
 
