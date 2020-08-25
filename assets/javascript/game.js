@@ -139,6 +139,11 @@ function modalTwelve() {
     $('#twelveModal').modal('show');
 }
 
+function modalThirteen() {
+    $('#thirteenModal').modal('show');
+}
+
+
 
 
 
@@ -215,7 +220,7 @@ function img() {
     }
     else if (randomWord === planets[13]) {
         document.getElementById("image").src = "./assets/images/kepler16b.jpg";
-        alert("This extrasolar planet is composed of gas, ice and rock!")
+        modalThirteen();
         clearIt()
     }
     else if (randomWord === planets[14]) {
