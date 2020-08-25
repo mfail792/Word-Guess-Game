@@ -147,6 +147,10 @@ function modalThirteen() {
     $('#thirteenModal').modal('show');
 }
 
+function modalFourteen() {
+    $('#fourteenModal').modal('show');
+}
+
 
 
 
@@ -229,7 +233,7 @@ function img() {
     }
     else if (randomWord === planets[14]) {
         document.getElementById("image").src = "./assets/images/kepler452b.jpg";
-        alert("This exoplanet is sometimes called 'Earth 2.0'!")
+        modalFourteen();
         clearIt()
     }
     else if (randomWord === planets[15]) {
