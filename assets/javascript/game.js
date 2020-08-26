@@ -243,7 +243,7 @@ function img() {
     }
     else if (randomWord === planets[15]) {
         document.getElementById("image").src = "./assets/images/andromeda.jpg";
-        alert("Our neighboring galaxy!")
+        modalFifteen();
         clearIt()
     }
 };
